@@ -48,7 +48,7 @@ class Auth extends BaseController{
     
 
     function pass(){
-        echo password_hash("rudi2123",PASSWORD_DEFAULT);
+        echo password_hash("passwordhash",PASSWORD_DEFAULT);
     }
 
 }
