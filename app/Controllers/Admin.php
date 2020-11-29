@@ -2,12 +2,11 @@
 
 class Admin extends BaseController{
 	public function index(){
-		$session = session();
 		$data = [
 			'judul' => "Beranda",
-			'nama_lengkap' => $session->get('nama_lengkap'),
-			'level' => $session->get('level'),
-			'username' =>$session->get('username')
+			'nama_lengkap' => $this->session->get('nama_lengkap'),
+			'level' => $this->session->get('level'),
+			'username' =>$this->session->get('username')
 		];
         return $this->renderView('admin/isi', $data);
 	}

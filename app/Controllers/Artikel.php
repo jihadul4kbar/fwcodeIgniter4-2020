@@ -4,6 +4,7 @@ use App\Models\ArtikelModel;
 use CodeIgniter\Controllers;
 class Artikel extends BaseController{
 
+
 	public function index(){
 		$model = new ArtikelModel();
 		$data  = [

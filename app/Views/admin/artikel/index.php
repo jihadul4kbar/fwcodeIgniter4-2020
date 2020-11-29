@@ -18,9 +18,11 @@
                     <tr>
                       <th width="20px">No</th>
                       <th>Judul</th>
+                      <th>Kategori</th>
                       <th width="200px">Aksi</th>
                     </tr>
                   </thead>
+                  <?php echo "<pre>"; print_r($artikel);?>
                   <tbody>
                     <?php if (! empty($artikel) && is_array($artikel)) :
                       $no=1; 
@@ -28,6 +30,7 @@
                     <tr>
                       <td><?= $no++;?></td>
                       <td><?= esc($row['judul']);?></td>
+                      <td><?= esc($row['kategori']);?><br> <small><?= esc($row['keterangan']);?></small> </td>
                       <td>
                         <a class="btn btn-primary" href="/artikel/edit/<?php echo $row['id'];?>"> <i class="fa fa-edit"></i></a>
                         <a class="btn btn-danger" href="/artikel/delete/<?php echo $row['id'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?'"><i class="fa fa-trash"></i></a></td>

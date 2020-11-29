@@ -9,7 +9,14 @@ class ArtikelModel extends Model
 	public function getArtikel($id = false)
     {
         if($id === false){
+            // return $this->table('artikel')
+            //             ->join()
+            //             ->get()
+            //             ->getResultArray();
+
             return $this->table('artikel')
+                        ->select('*')
+                        ->join('kategori','kategori.id_kategori = artikel.id_kategori')
                         ->get()
                         ->getResultArray();
         } else {

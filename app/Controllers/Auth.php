@@ -17,7 +17,7 @@ class Auth extends BaseController{
         $data = $model->where('username', $username)->first();
 
         // echo "<pre>";
-        // print_r($data);
+       // print_r($data);
 
         if($data){
             $pass = $data['password'];
@@ -48,7 +48,7 @@ class Auth extends BaseController{
     
 
     function pass(){
-        echo password_hash("passwordhash",PASSWORD_DEFAULT);
+        echo password_hash("passwordtes",PASSWORD_DEFAULT);
     }
 
 }

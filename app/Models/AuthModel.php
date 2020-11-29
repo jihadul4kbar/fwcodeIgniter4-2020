@@ -5,5 +5,5 @@ use CodeIgniter\Model;
 class AuthModel extends Model{
 	
 	protected $table = 'user';
-	protected $allowedFields = ['nama_lengkap','username','password','level'];
+	protected $allowedFields = ['iduser','nama_lengkap','username','password','level'];
 }
