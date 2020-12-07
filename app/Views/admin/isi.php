@@ -67,7 +67,7 @@
 
           <?php echo $nama_lengkap;?>  
           <?php echo $level;?>  
-          <?php echo $iduser;?>  
+          <?php //echo $iduser;?>  
 
 
 

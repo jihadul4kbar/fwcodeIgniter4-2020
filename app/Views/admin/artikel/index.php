@@ -12,6 +12,7 @@
                     <a href="<?php base_url();?>/artikel/add" class="btn btn-primary">Tambah </a>
                   </div>
                 </div>
+                <h4><?php  echo $msg; ?></h4>
                 <div class="card-body">
                 <table class="table table-bordered">
                   <thead>
@@ -22,7 +23,6 @@
                       <th width="200px">Aksi</th>
                     </tr>
                   </thead>
-                  <?php echo "<pre>"; print_r($artikel);?>
                   <tbody>
                     <?php if (! empty($artikel) && is_array($artikel)) :
                       $no=1; 

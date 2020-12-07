@@ -20,10 +20,16 @@ class ArtikelModel extends Model
                         ->get()
                         ->getResultArray();
         } else {
+            // return $this->table('artikel')
+            //             ->where('id', $id)
+            //             ->get()
+            //             ->getRowArray();
             return $this->table('artikel')
-                        ->where('id', $id)
+                        ->select('*')
+                        ->join('kategori','kategori.id_kategori = artikel.id_kategori')
+                        ->where('artikel.id', $id)
                         ->get()
-                        ->getRowArray();
+                        ->getResultArray();
         }   
     }
 
@@ -39,5 +45,10 @@ class ArtikelModel extends Model
     public function deleteData($id)
     {
         return $this->db->table($this->table)->delete(['id' => $id]);
+    }
+
+    public function getKategori(){
+        $kategori = $this->db->query("SELECT * FROM kategori")->getResultArray();
+        return $kategori;
     }
 }
